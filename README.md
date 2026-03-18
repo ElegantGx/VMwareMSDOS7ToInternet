@@ -155,7 +155,7 @@ e.g: https://vger.kernel.org/
 
   - MicroWeb
 
-  MicroWeb可与宿主机配合，较好的浏览http网页。
+  MicroWeb可与宿主机配合，较好的浏览https网页。
 
   输入
 
