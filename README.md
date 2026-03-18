@@ -1,6 +1,6 @@
 ## VMware 环境下MS-DOS7 网络栈构建与现代Web接入
 
-#### 1.项目概述（Project Overview)
+#### 1.项目概述
 
 本项目旨在实现在现代虚拟机环境中（VMware）中，为MS-DOS7.1构建可用的TCP/IP网络协议栈，并实现对现代互联网（HTTP/部分HTTPS）的受限访问。
 
@@ -34,13 +34,13 @@ e.g: https://vger.kernel.org/
 
 <img src="Picture/FINISH4.PNG" style="zoom:50%;" />
 
-#### 2.实验环境（Environmental Requirements)
+#### 2.实验环境
 
 - 宿主机：推荐Windows10及以上，需安装代理服务端[webone](https://github.com/atauenis/webone)，具体操作见webone详情页
 - 虚拟机软件：VMware WorkStation，访问官网安装
 - 操作系统：MS-DOS7.1 [Download](https://winworldpc.com/product/ms-dos/7x)
 
-#### 3.安装虚拟机（Setup VM）
+#### 3.安装虚拟机
 
 - 更改网卡
 
@@ -65,6 +65,8 @@ e.g: https://vger.kernel.org/
 #### 4.添加联网文件
 
 - 使用[UltralSO](https://www.ultraiso.com/)或其它同类软件制作iso，将文件存入虚拟光盘中并挂载
+
+- 本文中所有操作均使用Release中的iso完成
 
 - 盘符一般为A：
 
