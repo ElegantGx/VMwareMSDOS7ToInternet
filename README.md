@@ -142,7 +142,7 @@ e.g: https://vger.kernel.org/
 
   即可启动安装程序。注意，尽量将此文件置于C盘根目录。
 
-  配置网络选择网卡一路点击Next，选择Packet Wizcard，然后继续一路点击Next，程序将自动获取网络。
+  配置网络一路点击Next，选择Packet Wizcard，然后继续一路点击Next，程序将自动获取网络。
 
   退出后
 
@@ -204,7 +204,7 @@ e.g: https://vger.kernel.org/
 
   根据详情页指导，应当出现此界面
 
-  ![](C:\Users\Gx\Pictures\Camera Roll\SETUP.PNG)
+  ![](Picture/SETUP.PNG)
 
   此时，再次运行MicroWeb，就可以访问https网络了。
 
