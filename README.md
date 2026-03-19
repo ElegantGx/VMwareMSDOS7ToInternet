@@ -46,19 +46,19 @@ e.g: https://vger.kernel.org/
 
    	<img src="Picture/SETTING1.PNG"  />
 
-​	选择虚拟网络编辑器，选择更改设置，添加一张桥接网卡。
+	选择虚拟网络编辑器，选择更改设置，添加一张桥接网卡。
 
 <img src="Picture/SETUP2.PNG"  />
 
-​	根据网络环境选择桥接网卡，我处于WIFI环境，选择WIFI卡。创建好后启用该适配器。
+	根据网络环境选择桥接网卡，我处于WIFI环境，选择WIFI卡。创建好后启用该适配器。
 
-​   <img src="Picture/SETTING.PNG" style="zoom:120%;" />	
-
-
+   <img src="Picture/SETTING.PNG" style="zoom:120%;" />	
 
 
 
-​	其余设置大致相同即可，内存不要超过128M，可能导致系统不稳定。
+
+
+	其余设置大致相同即可，内存不要超过128M，可能导致系统不稳定。
 
 - 安装过程可参考 [此链接](https://github.com/cbuntu/wintutorial/blob/master/install/msdos7.md)
 
@@ -130,9 +130,9 @@ e.g: https://vger.kernel.org/
 
   若获得回应，联网配置完成。
 
-  #### 5.浏览器配置
+#### 5.浏览器配置
 
-  - Arachne
+- Arachne
 
   Arachne浏览器无法设置https代理，但对图片支持比较强大。
 
@@ -153,7 +153,7 @@ e.g: https://vger.kernel.org/
 
   删除安装文件
 
-  - MicroWeb
+- MicroWeb
 
   MicroWeb可与宿主机配合，较好的浏览https网页。
 
@@ -164,23 +164,23 @@ e.g: https://vger.kernel.org/
   START
   ```
 
-  即可启动。若想要其它主页形式，更改STARTP.HTM即可
+  即可启动。若想自定义主页形式，更改STARTP.HTM即可
 
-  ```htm
+  ```html
   <!DOCTYPE html>
   <html>
   <head>
-    <title>Start Page</title>  #页面标签
+      <title>Start Page</title>  #页面标签
   </head>
   <body>
-    <div class="link list">
-       <h1>Any Good Web</h1>   #题头
-       <ul>                           #链接，数量随意
-         <li class="link-item"><a href="What you want">You Want</a></li> 
-       </ul>
-    </div>
-    <hr>
-    <p>Press Esc To Quit.</p>  #底部文本
+      <div class="link list">
+          <h1>Any Good Web</h1>   #题头
+          <ul>                            #链接，数量任意
+              <li class="link-item"><a href="http://wiby.org">Wiby</a></li>
+          </ul>
+      </div>
+      <hr>
+      <p>Press Esc To Quit.</p>  #底部文本
   </body>
   </html>
   ```
@@ -192,57 +192,77 @@ e.g: https://vger.kernel.org/
   EDIT START.BAT
   ```
 
-  ```BAT
+  ```bat
   SET HTTP_PROXY=IP:8080
   ```
 
   此时仍不可浏览网页。
 
-  #### 6.宿主机配置
+#### 6.宿主机配置
 
-  - 安装代理服务端[webone](https://github.com/atauenis/webone)
+- 安装代理服务端[webone](https://github.com/atauenis/webone)
 
   根据详情页指导，应当出现此界面
 
-  ![](Picture/SETUP.PNG)
+    ![](Picture/SETUP.PNG)
 
   此时，再次运行MicroWeb，就可以访问https网络了。
 
-  - 代理需求
+- 代理需求
 
-  若需要在DOS中访问宿主机需连接代理才可访问的网址，需要找到宿主机使用的代理的端口号
+  若需要在DOS中访问宿主机需连接代理才可访问的网址，需要找到宿主机使用的代理的端口号。
 
   例如，宿主机依靠7890端口的代理访问网站A，现在想要在DOS中访问网站A。
 
   只需要打开webone.conf
 
-  <img src="Picture/END.PNG" style="zoom:150%;" />
+    <img src="Picture/END.PNG" style="zoom:150%;" />
 
   取消注释UpperProxy并正确填写（IP:PORT)即可。
 
-  #### 7.对程序的更改
+#### 7.对程序的更改
 
-  本项目未对程序本体做任何修改。
-  本项目所有文件均为原版。所有修改存于Releases中的ISO镜像中。
-  - ISO镜像更改：
-  - 去除了ARACHNE 1.99GPL的编译包ASRC199.ZIP，仅保留安装文件exe
-  - 增加了MicroWeb的启动脚本start.bat，自动配置代理，自动打开本地文件防止卡死
-  - 去除了MTCP除exe外所有文件，编写了适用于本教程的MTCP.cfg
+本项目未对程序本体做任何修改。
 
-  
-  #### 8.项目局限
+本项目修改后的文件均存放于Edit文件夹中，可作为范例。
 
-   本项目仍然无法解决DOS系统下的中文显示问题，且不支持IPX。
+项目的Realses中的ISO为修改完成的全软件合集。本文中所有操作均基于此ISO。您也可以对照文章自行制作。
 
+- ISO镜像修改：
+- 去除了ARACHNE 1.99GPL的编译包ASRC199.ZIP，仅保留安装文件exe
+- 增加了MicroWeb的启动脚本start.bat，自动配置代理，自动打开本地startp.htm防止卡死
+- 去除了MTCP除exe外所有文件，编写了适用于本教程的mtcp.cfg
 
-  #### 9.本项目所有文件来源于网络，且已给出链接，仅可作为个人交流学习使用。若发现本项目侵犯了您的权益，请联系3636230447@qq.com，以便删除处理。
+#### 8.项目局限
 
-  MS-DOS系统镜像来源：https://winworldpc.com/product/ms-dos/7x
+本项目仍然无法解决DOS系统下的中文显示问题，且不支持IPX。
 
-  PCNTPK来源：https://www.brutman.com/Device_Drivers/Device_Driver_Collection.html
+#### 9.项目原理
 
-  Arachne浏览器来源：https://www.glennmcc.org/arachne
+- 硬件层
 
-  MTCP来源：https://www.brutman.com/mTCP/mTCP.html
+  VMware虚拟出AMD PCnet网卡，提供原始的以太帧收发能力
 
-  天汇汉字系统来源：http://upload.cn-dos.net/img/127.rar
+- 驱动层
+
+  使用PCNTPK.COM完成硬件初始化，并提供INT 0x60中断
+
+- 协议层
+
+  通过调用PCNTPK提供的INT 0x60中断，mTCP及浏览器得以实现网络功能（如DHCP）
+
+- 代理层
+
+  由于DOS系统无法处理现代网页https的TLS加密等，因此为MicroWeb等浏览器设置宿主机http代理服务器，宿主机通过WebOne将https处理为http后回传DOS浏览器。
+
+#### 10.本项目所有文件来源于网络，且已给出链接，仅可作为个人交流学习使用。若发现本项目侵犯了您的权益，请联系3636230447@qq.com，以便删除处理。
+
+MS-DOS系统镜像来源：https://winworldpc.com/product/ms-dos/7x
+
+PCNTPK来源：https://www.brutman.com/Device_Drivers/Device_Driver_Collection.html
+
+Arachne浏览器来源：https://www.glennmcc.org/arachne
+
+mTCP来源：https://www.brutman.com/mTCP/mTCP.html
+
+天汇汉字系统来源：http://upload.cn-dos.net/img/127.rar
